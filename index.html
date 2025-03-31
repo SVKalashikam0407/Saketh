@@ -14,9 +14,10 @@
     <button onclick="showLibrary()" class="menu-btn">📖 Go to Library</button>
   </div>
 
-  <!-- Library View -->
+  <!-- Library Page -->
   <div id="library" class="hidden">
     <div class="bookshelf">
+
       <!-- Shelf 1 -->
       <div class="shelf" onclick="toggleSection('experience')">
         <h2>📘 Professional Experience</h2>
@@ -52,13 +53,15 @@
         <div id="contact" class="chapters hidden">
           <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/saketh" target="_blank">linkedin.com/in/saketh</a></p>
           <p><strong>Email:</strong> saketh@example.com</p>
-          <p><strong>GitHub:</strong> <a href="https://github.com/svkalashikam0407" target="_blank">svkalashikam0407</a></p>
-          <p><strong>Resume:</strong> <a href="resume.pdf" download>Download PDF</a></p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/SVKalashikam0407" target="_blank">SVKalashikam0407</a></p>
+          <p><strong>Resume:</strong> <a href="Resume.pdf" download>Download PDF</a></p>
         </div>
       </div>
+
     </div>
   </div>
 
+  <!-- Scripts -->
   <script>
     function showLibrary() {
       document.querySelector('.title-screen').style.display = 'none';
@@ -70,5 +73,6 @@
       section.classList.toggle('hidden');
     }
   </script>
+
 </body>
 </html>
