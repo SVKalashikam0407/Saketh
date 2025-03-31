@@ -10,90 +10,60 @@
 
   <div class="container">
 
-    <!-- About Book on Left -->
-    <div class="about-book" onclick="openBook('about')">
-      📘 About
-    </div>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <img src="profile.jpeg" alt="Profile Photo" class="profile-img" />
+      <h2>Saketh Vardhan Kalashikam</h2>
+      <p>Software Developer | Backend Engineer</p>
+      <ul class="contact-list">
+        <li>Email: <a href="mailto:saketh.kalashikam@gmail.com">Gmail</a></li>
+        <li><a href="https://www.linkedin.com/in/saketh-vardhan-kalashikam-bb9b291b8/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/SVKalashikam0407" target="_blank">GitHub</a></li>
+        <li><a href="Resume.pdf" download>Resume (PDF)</a></li>
+      </ul>
+    </aside>
 
-    <!-- Title -->
-    <h1 class="main-title">Saketh Vardhan Kalashikam</h1>
+    <!-- Main Content -->
+    <main class="main-content">
+      <section>
+        <h1>About Me</h1>
+        <p>I’m a passionate software developer with experience in Java, .NET, SQL, Python, and cloud tools like Azure. I enjoy solving real-world challenges with scalable, backend-focused solutions.</p>
+      </section>
 
-    <!-- Book Grid -->
-    <div class="book-grid">
-      <div class="book" onclick="openBook('experience')">📘 Experience</div>
-      <div class="book" onclick="openBook('skills')">📗 Skills</div>
-      <div class="book" onclick="openBook('projects')">📕 Projects</div>
-      <div class="book" onclick="openBook('education')">📙 Education</div>
-      <div class="book" onclick="openBook('websites')">📓 Websites</div>
-      <div class="book" onclick="openBook('contact')">📔 Contact</div>
-      <div class="book" onclick="openBook('resume')">📒 Resume</div>
-    </div>
+      <section>
+        <h1>Experience</h1>
+        <ul>
+          <li><strong>Infosys:</strong> Systems Engineer (.NET, SQL, Azure)</li>
+          <li><strong>Tech Mahindra:</strong> Associate Software Engineer</li>
+          <li><strong>EDPlus @ ASU:</strong> Instructional Design Assistant</li>
+        </ul>
+      </section>
 
-    <!-- Book Content -->
-    <div id="book-content" class="hidden">
-      <div id="about" class="book-section hidden">
-        <h2>📘 About Me</h2>
-        <p>I’m Saketh, a software developer with experience in .NET, Java, and Python. Passionate about building scalable backend systems and solving real-world problems.</p>
-      </div>
+      <section>
+        <h1>Skills</h1>
+        <p>Java, Python, .NET, SQL, Git, Databricks, IntelliJ, REST APIs, Azure, Postman</p>
+      </section>
 
-      <div id="experience" class="book-section hidden">
-        <h2>📘 Experience</h2>
-        <p>Chapter 1: Infosys – Systems Engineer (.NET, SQL, Azure)<br>
-           Chapter 2: EDPlus – Instructional Design Assistant</p>
-      </div>
+      <section>
+        <h1>Projects</h1>
+        <ul>
+          <li>Emotion-Aware Music Recommender</li>
+          <li>CAN Bus Trace Processor</li>
+          <li>Conference Knowledge Graph</li>
+          <li>FitTogether Agile Fitness App</li>
+        </ul>
+      </section>
 
-      <div id="skills" class="book-section hidden">
-        <h2>📗 Skills</h2>
-        <p>Java, Python, SQL, .NET, Databricks, IntelliJ, Git, Azure, Postman</p>
-      </div>
-
-      <div id="projects" class="book-section hidden">
-        <h2>📕 Projects</h2>
-        <p>1. Emotion-Aware Music Recommender<br>
-           2. CAN Bus Trace Processor<br>
-           3. Conference Knowledge Graph<br>
-           4. FitTogether Fitness App</p>
-      </div>
-
-      <div id="education" class="book-section hidden">
-        <h2>📙 Education</h2>
-        <p>Master’s in Information Technology – ASU<br>
-           B.Tech in Computer Science – XYZ University</p>
-      </div>
-
-      <div id="websites" class="book-section hidden">
-        <h2>📓 Websites</h2>
-        <p><a href="https://linkedin.com/in/saketh" target="_blank">LinkedIn</a><br>
-           <a href="https://github.com/SVKalashikam0407" target="_blank">GitHub</a></p>
-      </div>
-
-      <div id="contact" class="book-section hidden">
-        <h2>📔 Contact</h2>
-        <p>Email: saketh@example.com</p>
-      </div>
-
-      <div id="resume" class="book-section hidden">
-        <h2>📒 Resume</h2>
-        <p><a href="Resume.pdf" download>Download Resume (PDF)</a></p>
-      </div>
-
-      <!-- Close Book -->
-      <button onclick="closeBook()" class="close-btn">🔙 Close Book</button>
-    </div>
+      <section>
+        <h1>Education</h1>
+        <ul>
+          <li><strong>Master’s in Information Technology</strong> – Arizona State University</li>
+          <li><strong>B.Tech in Computer Science</strong> – XYZ University</li>
+        </ul>
+      </section>
+    </main>
 
   </div>
-
-  <script>
-    function openBook(sectionId) {
-      document.getElementById('book-content').classList.remove('hidden');
-      document.querySelectorAll('.book-section').forEach(sec => sec.classList.add('hidden'));
-      document.getElementById(sectionId).classList.remove('hidden');
-    }
-
-    function closeBook() {
-      document.getElementById('book-content').classList.add('hidden');
-    }
-  </script>
 
 </body>
 </html>
