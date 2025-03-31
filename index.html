@@ -3,80 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Saketh | Portfolio</title>
+  <title>Saketh's Digital Library</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Header -->
   <header>
-    <h1>Hi, I'm Saketh 👋</h1>
-    <p>Aspiring Software Developer | Master's in IT</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#academics">Academics</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#grades">Grades</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <h1>📚 Saketh’s Portfolio Library</h1>
+    <p>Click on a book to explore sections</p>
   </header>
 
-  <!-- About -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I’m currently pursuing my Master’s in Information Technology and passionate about backend development and scalable systems.</p>
+  <div class="library">
+    <div class="book" onclick="openSection('experience')">Experience</div>
+    <div class="book" onclick="openSection('education')">Education</div>
+    <div class="book" onclick="openSection('certificates')">Certificates</div>
+    <div class="book" onclick="openSection('projects')">Projects</div>
+    <div class="book"><a href="resume.pdf" download>Download Resume</a></div>
+  </div>
+
+  <section id="experience" class="hidden">
+    <h2>💼 Experience</h2>
+    <p>• Infosys – Systems Engineer (.NET, SQL, Azure)<br>
+       • Tech Mahindra – Associate Software Engineer<br>
+       • EDPlus, ASU – Instructional Design Assistant</p>
   </section>
 
-  <!-- Academics -->
-  <section id="academics">
-    <h2>Academic Background</h2>
-    <p><strong>Master’s in Information Technology</strong><br />XYZ University – 2023–2025</p>
+  <section id="education" class="hidden">
+    <h2>🎓 Education</h2>
+    <p>• Master’s in Information Technology – ASU<br>
+       • B.Tech – Computer Science – XYZ University</p>
   </section>
 
-  <!-- Experience -->
-  <section id="experience">
-    <h2>Work Experience</h2>
-    <ul>
-      <li>💼 Associate Software Engineer at Tech Mahindra (2021–2023)</li>
-      <li>💼 Systems Engineer at Infosys – .NET & SQL, cloud support</li>
-      <li>🎓 Instructional Design Assistant at EDPlus, ASU</li>
-    </ul>
+  <section id="certificates" class="hidden">
+    <h2>📜 Certificates</h2>
+    <p>• Salesforce Intern Certificate<br>
+       • Java Programming – Infosys Training<br>
+       • Agile Methodology – Coursera</p>
   </section>
 
-  <!-- Projects -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li>🎵 Emotion-Aware Music Recommender – Python, ML</li>
-      <li>🚗 CAN Bus Trace Processor – Java</li>
-    </ul>
+  <section id="projects" class="hidden">
+    <h2>🛠️ Projects</h2>
+    <p>• Emotion-Aware Music Recommender<br>
+       • CAN Bus Trace Processor</p>
   </section>
 
-  <!-- Grades -->
-  <section id="grades">
-    <h2>Grades</h2>
-    <table border="1">
-      <tr><th>Course</th><th>Grade</th></tr>
-      <tr><td>Data Structures</td><td>A</td></tr>
-      <tr><td>Software Engineering</td><td>A</td></tr>
-      <tr><td>Machine Learning</td><td>B+</td></tr>
-    </table>
-  </section>
-
-  <!-- Resume and Contact -->
-  <section id="contact">
-    <h2>Resume & Contact</h2>
-    <p><a href="resume.pdf" download>📄 Download My Resume</a></p>
-    <p>📧 Email: <a href="mailto:saketh@example.com">saketh@example.com</a></p>
-    <p>🔗 LinkedIn: <a href="https://linkedin.com/in/saketh" target="_blank">linkedin.com/in/saketh</a></p>
-    <p>💻 GitHub: <a href="https://github.com/saketh" target="_blank">github.com/saketh</a></p>
-  </section>
-
-  <!-- Footer -->
   <footer>
     <p>© 2025 Saketh Vardhan Kalashikam</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
