@@ -1,31 +1,80 @@
-.title-page {
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url('https://cdn.pixabay.com/photo/2016/11/29/04/18/library-1866846_1280.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+}
+
+/* Title screen */
+.title-screen {
   height: 100vh;
+  background-color: rgba(0,0,0,0.7);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
 }
 
-.title-page h1 {
-  font-size: 48px;
+.title-screen h1 {
+  font-size: 42px;
   margin-bottom: 20px;
 }
 
 .menu-btn {
-  background-color: #ffcc00;
-  color: #333;
   padding: 12px 24px;
   font-size: 18px;
+  background-color: #ffcc00;
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  color: #333;
+  font-weight: bold;
 }
 
-.menu-btn:hover {
-  background-color: #ffb700;
+/* Library shelf */
+#library {
+  padding: 60px 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  min-height: 100vh;
+}
+
+.shelf {
+  max-width: 800px;
+  margin: auto;
+}
+
+.book {
+  font-size: 22px;
+  background-color: #d4af37;
+  color: #000;
+  padding: 15px 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.book:hover {
+  transform: scale(1.03);
+  background-color: #f3d25f;
+}
+
+.chapter-list {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-top: -10px;
+  margin-bottom: 30px;
+}
+
+a {
+  color: #1a73e8;
 }
 
 .hidden {
