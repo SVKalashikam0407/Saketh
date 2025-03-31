@@ -8,77 +8,87 @@
 </head>
 <body style="background-image: url('https://cdn.pixabay.com/photo/2016/11/29/04/18/library-1866846_1280.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
 
-  <header class="hero">
-    <h1>📚 Saketh Vardhan Kalashikam</h1>
-    <p class="sub-text">Explore my story — one book at a time.</p>
-  </header>
-
-  <div class="book-shelf">
-    <div class="book-item" onclick="openSection('experience')">
-      <img src="https://cdn-icons-png.flaticon.com/512/29/29302.png" alt="Experience Book">
-      <p>Experience</p>
-    </div>
-
-    <div class="book-item" onclick="openSection('education')">
-      <img src="https://cdn-icons-png.flaticon.com/512/29/29302.png" alt="Education Book">
-      <p>Education</p>
-    </div>
-
-    <div class="book-item" onclick="openSection('certificates')">
-      <img src="https://cdn-icons-png.flaticon.com/512/29/29302.png" alt="Certificates Book">
-      <p>Certificates</p>
-    </div>
-
-    <div class="book-item" onclick="openSection('projects')">
-      <img src="https://cdn-icons-png.flaticon.com/512/29/29302.png" alt="Projects Book">
-      <p>Projects</p>
-    </div>
-
-    <div class="book-item">
-      <a href="resume.pdf" download>
-        <img src="https://cdn-icons-png.flaticon.com/512/29/29302.png" alt="Resume Book">
-        <p>Resume</p>
-      </a>
-    </div>
+  <!-- Title Page -->
+  <div id="title-page" class="title-page">
+    <h1>Saketh Vardhan Kalashikam</h1>
+    <button onclick="showMenu()" class="menu-btn">📖 Go to Menu</button>
   </div>
 
-  <div class="library">
-    <div class="book" onclick="openSection('experience')">Experience</div>
-    <div class="book" onclick="openSection('education')">Education</div>
-    <div class="book" onclick="openSection('certificates')">Certificates</div>
-    <div class="book" onclick="openSection('projects')">Projects</div>
-    <div class="book"><a href="resume.pdf" download>Download Resume</a></div>
+  <!-- Hidden content initially -->
+  <div id="main-content" class="hidden">
+
+    <header class="hero">
+      <h1>📚 Saketh Vardhan Kalashikam</h1>
+      <p class="sub-text">Explore my story — one book at a time.</p>
+    </header>
+
+    <div class="book-shelf">
+      <div class="book-item" onclick="openSection('experience')">
+        <img src="https://cdn-icons-png.flaticon.com/512/29/29302.png" alt="Experience Book">
+        <p>Experience</p>
+      </div>
+      <div class="book-item" onclick="openSection('education')">
+        <img src="https://cdn-icons-png.flaticon.com/512/29/29302.png" alt="Education Book">
+        <p>Education</p>
+      </div>
+      <div class="book-item" onclick="openSection('certificates')">
+        <img src="https://cdn-icons-png.flaticon.com/512/29/29302.png" alt="Certificates Book">
+        <p>Certificates</p>
+      </div>
+      <div class="book-item" onclick="openSection('projects')">
+        <img src="https://cdn-icons-png.flaticon.com/512/29/29302.png" alt="Projects Book">
+        <p>Projects</p>
+      </div>
+      <div class="book-item">
+        <a href="resume.pdf" download>
+          <img src="https://cdn-icons-png.flaticon.com/512/29/29302.png" alt="Resume Book">
+          <p>Resume</p>
+        </a>
+      </div>
+    </div>
+
+    <section id="experience" class="hidden">
+      <h2>💼 Experience</h2>
+      <p>• Infosys – Systems Engineer (.NET, SQL, Azure)<br>
+         • Infosys - Systems Engineer Trainee</p>
+    </section>
+
+    <section id="education" class="hidden">
+      <h2>🎓 Education</h2>
+      <p>• Master’s in Information Technology – ASU<br>
+         • B.Tech – Computer Science – XYZ University</p>
+    </section>
+
+    <section id="certificates" class="hidden">
+      <h2>📜 Certificates</h2>
+      <p>• Salesforce Intern Certificate<br>
+         • Java Programming – Infosys Training<br>
+         • Agile Methodology – Coursera</p>
+    </section>
+
+    <section id="projects" class="hidden">
+      <h2>🛠️ Projects</h2>
+      <p>• Emotion-Aware Music Recommender<br>
+         • CAN Bus Trace Processor</p>
+    </section>
+
+    <footer>
+      <p>© 2025 Saketh Vardhan Kalashikam</p>
+    </footer>
   </div>
 
-  <section id="experience" class="hidden">
-    <h2>💼 Experience</h2>
-    <p>• Infosys – Systems Engineer (.NET, SQL, Azure)<br>
-       • Infosys - Systems Engineer Trainee</p>
-  </section>
+  <!-- JS -->
+  <script>
+    function showMenu() {
+      document.getElementById('title-page').style.display = 'none';
+      document.getElementById('main-content').style.display = 'block';
+    }
 
-  <section id="education" class="hidden">
-    <h2>🎓 Education</h2>
-    <p>• Master’s in Information Technology – ASU<br>
-       • B.Tech – Computer Science – XYZ University</p>
-  </section>
+    function openSection(sectionId) {
+      document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
+      document.getElementById(sectionId).style.display = 'block';
+    }
+  </script>
 
-  <section id="certificates" class="hidden">
-    <h2>📜 Certificates</h2>
-    <p>• Salesforce Intern Certificate<br>
-       • Java Programming – Infosys Training<br>
-       • Agile Methodology – Coursera</p>
-  </section>
-
-  <section id="projects" class="hidden">
-    <h2>🛠️ Projects</h2>
-    <p>• Emotion-Aware Music Recommender<br>
-       • CAN Bus Trace Processor</p>
-  </section>
-
-  <footer>
-    <p>© 2025 Saketh Vardhan Kalashikam</p>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
