@@ -8,48 +8,54 @@
 </head>
 <body>
 
-  <!-- Title Page -->
+  <!-- Welcome Page -->
   <div class="title-screen">
     <h1>Saketh Vardhan Kalashikam</h1>
-    <button onclick="showLibrary()" class="menu-btn">📖 Go to My Library</button>
+    <button onclick="showLibrary()" class="menu-btn">📖 Go to Library</button>
   </div>
 
   <!-- Library View -->
   <div id="library" class="hidden">
-
-    <div class="shelf">
-
-      <div class="book" onclick="toggleBook('experience')">📘 Professional Experience</div>
-      <div id="experience" class="chapter-list hidden">
-        <p><strong>Chapter 1:</strong> Infosys – .NET, SQL, Azure</p>
-        <p><strong>Chapter 2:</strong> Instructional Design Assistant – EDPlus at ASU</p>
+    <div class="bookshelf">
+      <!-- Shelf 1 -->
+      <div class="shelf" onclick="toggleSection('experience')">
+        <h2>📘 Professional Experience</h2>
+        <div id="experience" class="chapters hidden">
+          <p><strong>Chapter 1:</strong> Infosys – .NET, SQL, Azure</p>
+          <p><strong>Chapter 2:</strong> EDPlus – Instructional Design Assistant</p>
+        </div>
       </div>
 
-      <div class="book" onclick="toggleBook('projects')">📗 Projects</div>
-      <div id="projects" class="chapter-list hidden">
-        <p><strong>Chapter 1:</strong> Emotion-Aware Music Recommender</p>
-        <p><strong>Chapter 2:</strong> CAN Bus Trace Processor</p>
-        <p><strong>Chapter 3:</strong> Conference Knowledge Graph</p>
-        <p><strong>Chapter 4:</strong> FitTogether Agile App</p>
+      <!-- Shelf 2 -->
+      <div class="shelf" onclick="toggleSection('projects')">
+        <h2>📗 Projects</h2>
+        <div id="projects" class="chapters hidden">
+          <p><strong>Chapter 1:</strong> Emotion-Aware Music Recommender</p>
+          <p><strong>Chapter 2:</strong> CAN Bus Trace Processor</p>
+          <p><strong>Chapter 3:</strong> Conference Knowledge Graph</p>
+          <p><strong>Chapter 4:</strong> FitTogether Agile App</p>
+        </div>
       </div>
 
-      <div class="book" onclick="toggleBook('education')">📕 Education</div>
-      <div id="education" class="chapter-list hidden">
-        <p><strong>Chapter 1:</strong> Master’s in IT – Arizona State University</p>
-        <p><strong>Chapter 2:</strong> B.Tech – Computer Science</p>
+      <!-- Shelf 3 -->
+      <div class="shelf" onclick="toggleSection('education')">
+        <h2>📕 Education</h2>
+        <div id="education" class="chapters hidden">
+          <p><strong>Chapter 1:</strong> Master's in IT – ASU</p>
+          <p><strong>Chapter 2:</strong> B.Tech – Computer Science</p>
+        </div>
       </div>
 
-      <div class="book" onclick="toggleBook('websites')">📙 Websites</div>
-      <div id="websites" class="chapter-list hidden">
-        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/saketh" target="_blank">linkedin.com/in/saketh</a></p>
+      <!-- Shelf 4 -->
+      <div class="shelf" onclick="toggleSection('contact')">
+        <h2>📙 Websites & Contact</h2>
+        <div id="contact" class="chapters hidden">
+          <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/saketh" target="_blank">linkedin.com/in/saketh</a></p>
+          <p><strong>Email:</strong> saketh@example.com</p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/svkalashikam0407" target="_blank">svkalashikam0407</a></p>
+          <p><strong>Resume:</strong> <a href="resume.pdf" download>Download PDF</a></p>
+        </div>
       </div>
-
-      <div class="book" onclick="toggleBook('contact')">📓 Contact</div>
-      <div id="contact" class="chapter-list hidden">
-        <p><strong>Email:</strong> saketh@example.com</p>
-        <p><strong>GitHub:</strong> <a href="https://github.com/svkalashikam0407" target="_blank">svkalashikam0407</a></p>
-      </div>
-
     </div>
   </div>
 
@@ -59,11 +65,10 @@
       document.getElementById('library').style.display = 'block';
     }
 
-    function toggleBook(id) {
-      const book = document.getElementById(id);
-      book.classList.toggle('hidden');
+    function toggleSection(id) {
+      const section = document.getElementById(id);
+      section.classList.toggle('hidden');
     }
   </script>
-
 </body>
 </html>
