@@ -6,16 +6,41 @@
   <title>Saketh Vardhan Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body style="background-image: url('https://cdn.pixabay.com/photo/2016/11/29/04/18/library-1866846_1280.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
 
   <header class="hero">
-  <h1>📚 Saketh Vardhan Kalashikam</h1>
-  <p>Click on a book to explore sections</p>
-  <div class="book-intro">
-    <img src="https://cdn-icons-png.flaticon.com/512/29/29302.png" alt="Book Icon" class="book-icon" onclick="openSection('experience')" />
-    <p>Click the book to open and learn about my experience</p>
+    <h1>📚 Saketh Vardhan Kalashikam</h1>
+    <p class="sub-text">Explore my story — one book at a time.</p>
+  </header>
+
+  <div class="book-shelf">
+    <div class="book-item" onclick="openSection('experience')">
+      <img src="https://cdn-icons-png.flaticon.com/512/29/29302.png" alt="Experience Book">
+      <p>Experience</p>
+    </div>
+
+    <div class="book-item" onclick="openSection('education')">
+      <img src="https://cdn-icons-png.flaticon.com/512/29/29302.png" alt="Education Book">
+      <p>Education</p>
+    </div>
+
+    <div class="book-item" onclick="openSection('certificates')">
+      <img src="https://cdn-icons-png.flaticon.com/512/29/29302.png" alt="Certificates Book">
+      <p>Certificates</p>
+    </div>
+
+    <div class="book-item" onclick="openSection('projects')">
+      <img src="https://cdn-icons-png.flaticon.com/512/29/29302.png" alt="Projects Book">
+      <p>Projects</p>
+    </div>
+
+    <div class="book-item">
+      <a href="resume.pdf" download>
+        <img src="https://cdn-icons-png.flaticon.com/512/29/29302.png" alt="Resume Book">
+        <p>Resume</p>
+      </a>
+    </div>
   </div>
-</header>
 
   <div class="library">
     <div class="book" onclick="openSection('experience')">Experience</div>
