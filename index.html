@@ -2,68 +2,93 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=2.0"/>
   <title>Saketh Vardhan Kalashikam</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 
-  <div class="container">
+  <!-- Background + Glass Container -->
+  <div class="hero-bg">
+    <div class="glass-card" id="main-menu">
+      <img src="profile.jpeg" class="profile-pic" alt="Saketh Vardhan" />
+      <h1 class="glow-text">Saketh Vardhan Kalashikam</h1>
+      <p class="subtitle">Software Developer | Data Engineer</p>
 
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <img src="profile.jpeg" alt="Profile Photo" class="profile-img" />
-      <h2>Saketh Vardhan Kalashikam</h2>
-      <p>Software Developer | Data Engineer</p>
-      <ul class="contact-list">
-        <li>Email: <a href="mailto:saketh.kalashikam@gmail.com">Gmail</a></li>
-        <li><a href="https://www.linkedin.com/in/saketh-vardhan-kalashikam-bb9b291b8/" target="_blank">LinkedIn</a></li>
-        <li><a href="https://github.com/SVKalashikam0407" target="_blank">GitHub</a></li>
-        <li><a href="Resume.pdf" download>Resume (PDF)</a></li>
-      </ul>
-    </aside>
+      <div class="card-buttons">
+        <button onclick="openCard('About')">About</button>
+        <button onclick="openCard('Professional Experience')">Professional Experience</button>
+        <button onclick="openCard('Projects')">Projects</button>
+        <button onclick="openCard('Skills')">Skills</button>
+        <button onclick="openCard('Resume')">Resume</button>
+        <button onclick="openCard('Contact')">Contact</button>
+      </div>
+    </div>
 
-    <!-- Main Content -->
-    <main class="main-content">
-      <section>
-        <h1>About Me</h1>
-        <p>I’m a passionate software developer with experience in Java, .NET, SQL, Python, and cloud tools like Azure. I enjoy solving real-world challenges with scalable, backend-focused solutions.</p>
-      </section>
+    <!-- Info Panel -->
+    <div class="info-card hidden" id="info-card">
+      <div id="About" class="info-section hidden">
+        <h2>About Me</h2>
+        <p>I am an enthusiastic and self-driven Software Engineer with 2 years of professional experience, specializing in Java, Python, .NET, React.js, SQL, Azure DevOps, and Databricks. My expertise spans full-stack development, CI/CD pipelines, cloud computing, software design, data management, and agile methodologies. I have delivered impactful projects in data visualization, data management, and research focused on mobile data security systems.
 
-      <section>
-        <h1>Experience</h1>
-        <ul>
-          <li><strong>Infosys:</strong> Systems Engineer (.NET, SQL, Azure)</li>
-          <li><strong>Tech Mahindra:</strong> Associate Software Engineer</li>
-          <li><strong>EDPlus @ ASU:</strong> Instructional Design Assistant</li>
-        </ul>
-      </section>
+          Currently, I am pursuing my Master’s in Information Technology at Arizona State University, where I continue to expand my technical and leadership skills. I serve as an E-board member and Schedule Coordinator for the Indian Cultural Association at ASU, managing event logistics, crowd control, and a team of 15+ volunteers and leads.
+          
+          Though I completed my Bachelor's in Mechanical Engineering, my interest in IoT and robotics—technologies closely linked to IT—led me to explore programming. This inspired my transition into the IT domain, where I am now focused on building innovative and scalable software solutions. I am passionate about staying current with emerging tools and technologies, and I approach every project with responsibility, creativity, and a commitment to timely delivery.</p>
+      </div>
 
-      <section>
-        <h1>Skills</h1>
-        <p>Java, Python, .NET, SQL, Git, Databricks, IntelliJ, REST APIs, Azure, Postman</p>
-      </section>
+      <div id="Professional Experience" class="info-section hidden">
+        <h2>Work Experience</h2>
+        <p>Systems Engineer, Infosys Pvt.Ltd</p>
+        <p>Systems Engineer Trainee, Infosys Pvt.Ltd</p>
+      </div>
 
-      <section>
-        <h1>Projects</h1>
-        <ul>
-          <li>Emotion-Aware Music Recommender</li>
-          <li>CAN Bus Trace Processor</li>
-          <li>Conference Knowledge Graph</li>
-          <li>FitTogether Agile Fitness App</li>
-        </ul>
-      </section>
+      <div id="Projects" class="info-section hidden">
+        <h2>Projects</h2>
+        <p>📊 Book Rating Analysis Project<br>🚌 Ride-Sharing Data<br>📊 Research on Privacy Requirements for Mobile Applications<br>🎾 Manufacturing of Bowling Machine</p>
+      </div>
 
-      <section>
-        <h1>Education</h1>
-        <ul>
-          <li><strong>Master’s in Information Technology</strong> – Arizona State University</li>
-          <li><strong>B.Tech in Computer Science</strong> – XYZ University</li>
-        </ul>
-      </section>
-    </main>
+      <div id="Skills" class="info-section hidden">
+        <h2>Skills</h2>
+        <p>Java • Python • SQL • .NET • Azure • IntelliJ • Git • Postman • Databricks • HTML • CSS</p>
+      </div>
 
+      <div id="Resume" class="info-section hidden">
+        <h2>Resume</h2>
+        <p><a href="Resume.pdf" download>📄 Download Resume (PDF)</a></p>
+      </div>
+
+      <div id="Contact" class="info-section hidden">
+        <h2>Contact</h2>
+        <p>📧 <a href="https://saketh.kalashikam@gmail.com" target="_blank">Mail Address</a><br>
+          <p>📧 <a href="https://skalash1@asu.edu" target="_blank">ASU Mail</a><br>
+           🔗 <a href="https://linkedin.com" target="_blank">LinkedIn</a><br>
+           💻 <a href="https://github.com/SVKalashikam0407" target="_blank">GitHub</a><br>
+           📞 <a href="+1 6234766267" target="_blank">Mobile</a>
+        </p>
+      </div>
+
+      <button class="back-btn" onclick="goBack()">← Back to Menu</button>
+    </div>
   </div>
+
+  <script>
+    function openCard(id) {
+      document.getElementById("main-menu").classList.add("hidden");
+      document.getElementById("info-card").classList.remove("hidden");
+
+      document.querySelectorAll(".info-section").forEach(section => {
+        section.classList.add("hidden");
+      });
+
+      document.getElementById(id).classList.remove("hidden");
+    }
+
+    function goBack() {
+      document.getElementById("main-menu").classList.remove("hidden");
+      document.getElementById("info-card").classList.add("hidden");
+    }
+  </script>
 
 </body>
 </html>
